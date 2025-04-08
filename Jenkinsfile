@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('dev') {
             steps {
-                eho 'Hello World'
+                error 'Hello World'
             }
         }
     }
