@@ -11,7 +11,7 @@ pipeline {
         stage('dev') {
             steps {
                 echo 'Hello dev'
-                sleep 10
+                sh 'sleep 10'
             }
         }
         stage('QA') {
