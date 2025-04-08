@@ -20,7 +20,7 @@ pipeline {
         }
         stage('prod') {
             steps {
-                echo 'Hello prod'
+                echo 'Hello pro'
             }
         }
     }
