@@ -8,7 +8,6 @@ pipeline {
         stage('dev') {
             steps {
                 echo 'Hello World'
-                echo 'Hello jenkins'
             }
         }
     }
