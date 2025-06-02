@@ -4,7 +4,7 @@ pipeline{
         stage('build'){
             steps{
                 script{
-                      echo "THIS IS BUILD"
+                      eco "THIS IS BUILD"
               
                 }
             }
