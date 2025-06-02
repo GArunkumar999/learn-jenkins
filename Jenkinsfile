@@ -1,27 +1,19 @@
-pipeline {
-    agent {
-        label 'AGENT-1'
-    }
-            
-   options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 10, unit: 'SECONDS')
-    }
-    stages {
-        stage('dev') {
-            steps {
-                echo 'Hello WORLD'
-                sh 'sleep 10'
+pipeline{
+    agent any
+    stages{
+        stage('build'){
+            steps{
+                echo "THIS IS BUILD"
             }
         }
-        stage('QA') {
-            steps {
-                echo 'Hello qa'
+        stage('test'){
+            steps{
+                echo "THIS IS TEST"
             }
         }
-        stage('prod') {
-            steps {
-                echo 'Hello prod'
+        stage('deploy'){
+            steps{
+                echo "THIS IS DEPLOY"
             }
         }
     }
