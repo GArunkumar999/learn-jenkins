@@ -17,6 +17,13 @@ pipeline{
                 }
             }
         }
+        stage('scan'){
+            steps{
+                script{
+                    echo "THIS IS SCAN"
+                }
+            }
+        }
         stage('deploy'){
             steps{
                  script{
