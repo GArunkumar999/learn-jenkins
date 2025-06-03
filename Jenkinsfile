@@ -20,7 +20,7 @@ pipeline{
         stage('deploy'){
             steps{
                  script{
-                      eho "THIS IS DEPLOY"
+                      echo "THIS IS DEPLOY"
               
                 }
             }
