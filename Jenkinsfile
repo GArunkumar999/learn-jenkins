@@ -26,4 +26,18 @@ pipeline{
             }
         }
     }
+    post{
+        always{
+            echo "run always"
+        }
+        success{
+            echo "build is success"
+        }
+        failure{
+            echo "build is failure"
+        }
+        aborted{
+            echo "build is aborted"
+        }
+    }
 }
