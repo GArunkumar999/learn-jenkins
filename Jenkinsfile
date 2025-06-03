@@ -4,7 +4,7 @@ pipeline{
         stage('build'){
             steps{
                 script{
-                      eho "THIS IS BUILD"
+                      echo "THIS IS BUILD"
               
                 }
             }
@@ -20,7 +20,7 @@ pipeline{
         stage('deploy'){
             steps{
                  script{
-                      echo "THIS IS DEPLOY"
+                      eho "THIS IS DEPLOY"
               
                 }
             }
