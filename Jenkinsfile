@@ -53,7 +53,7 @@ pipeline{
         stage('deploy'){
             when { 
                 environment name: 'DEPLOY_TO', value: 'production'
-                 branch 'master'
+                 branch 'main'
                 }
             // input {
             //     message "Should we continue?"
