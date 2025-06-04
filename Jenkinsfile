@@ -71,7 +71,8 @@ pipeline{
                 }
             }
         }
-        parallel{
+        stage('parallel-tasks'){
+            parallel{
             stage("home"){
                 steps{
                     echo "home page"
@@ -87,7 +88,9 @@ pipeline{
                     echo "search products"
                 }
             }
+         }
         }
+      
     }
     post{
         always{
