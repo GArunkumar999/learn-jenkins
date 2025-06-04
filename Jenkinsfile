@@ -1,13 +1,15 @@
 pipeline{
     agent any
     options {
-       retry(4)
+       timeout(time: 1, unit: 'SECONDS') 
+       retry(3)
+       disableConcurrentBuilds()
     }   
     stages{
         stage('build'){
             steps{
                 script{
-                      eho "THIS IS BUILD"
+                      echo "THIS IS BUILD"
               
                 }
             }
