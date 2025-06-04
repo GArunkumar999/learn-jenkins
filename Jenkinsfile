@@ -8,6 +8,7 @@ pipeline{
     environment{
         project = "expense"
         environment = "dev"
+        DEPLOY_TO = "dev"
     }  
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr ARUN', description: 'Who should I say hello to?')
@@ -27,7 +28,7 @@ pipeline{
                       echo "THIS IS BUILD"
                       echo "project is $project"
                       echo "environment is $environment"
-                      
+
                       echo "Hello ${params.PERSON}"
 
                      echo "Biography: ${params.BIOGRAPHY}"
@@ -50,6 +51,7 @@ pipeline{
             }
         }
         stage('deploy'){
+            when { environment name: 'DEPLOY_TO', value: 'production' }.
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
