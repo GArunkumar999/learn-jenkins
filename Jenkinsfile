@@ -54,7 +54,7 @@ pipeline{
         stage('deploy'){
             when { 
                 environment name: 'DEPLOY_TO', value: 'production'
-                expression { return env.BRANCH_NAME == 'main' }
+                expression { return env.branch == 'main' }
                 }
             // input {
             //     message "Should we continue?"
