@@ -2,12 +2,13 @@ pipeline{
     agent any
     options {
        timeout(time: 1, unit: 'SECONDS') 
+       retry(3)
     }   
     stages{
         stage('build'){
             steps{
                 script{
-                      echo "THIS IS BUILD"
+                      eho "THIS IS BUILD"
               
                 }
             }
