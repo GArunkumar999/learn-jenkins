@@ -1,15 +1,21 @@
 pipeline{
     agent any
     options {
-       timeout(time: 1, unit: 'SECONDS') 
+       timeout(time: 10, unit: 'MINUTES') 
        retry(3)
        disableConcurrentBuilds()
+    }
+    environment{
+        project = expense
+        environment = dev
     }   
     stages{
         stage('build'){
             steps{
                 script{
                       echo "THIS IS BUILD"
+                      echo "project is $project"
+                      echo "environment is $environment"
               
                 }
             }
