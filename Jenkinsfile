@@ -76,16 +76,19 @@ pipeline{
             stage("home"){
                 steps{
                     echo "home page"
+                    echo "sleep 10"
                 }
             }
             stage("cart"){
                 steps{
                     echo "cart"
+                    echo "sleep 10"
                 }
             }
             stage("searching products"){
                 steps{
                     echo "search products"
+                    echo "sleep 10"
                 }
             }
          }
