@@ -6,8 +6,8 @@ pipeline{
        disableConcurrentBuilds()
     }
     environment{
-        project = expense
-        environment = dev
+        project = "expense"
+        environment = "dev"
     }   
     stages{
         stage('build'){
