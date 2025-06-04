@@ -9,6 +9,7 @@ pipeline{
         project = "expense"
         environment = "dev"
         DEPLOY_TO = "production"
+        branch = "master"
     }  
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr ARUN', description: 'Who should I say hello to?')
@@ -53,7 +54,7 @@ pipeline{
         stage('deploy'){
             when { 
                 environment name: 'DEPLOY_TO', value: 'production'
-                 branch 'main'
+                expression { return env.BRANCH_NAME == 'main' }
                 }
             // input {
             //     message "Should we continue?"
