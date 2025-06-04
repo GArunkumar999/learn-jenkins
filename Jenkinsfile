@@ -9,7 +9,7 @@ pipeline{
         project = "expense"
         environment = "dev"
         DEPLOY_TO = "production"
-        branch = "master"
+        branch = "main"
     }  
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr ARUN', description: 'Who should I say hello to?')
