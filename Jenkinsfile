@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent{
+        label 'agent'
+    }
     options {
        timeout(time: 10, unit: 'MINUTES') 
        retry(3)
@@ -102,7 +104,6 @@ pipeline{
         }
         success{
             echo "build is success"
-            deleteDir()
         }
         failure{
             echo "build is failure"
