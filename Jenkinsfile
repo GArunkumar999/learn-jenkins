@@ -102,6 +102,7 @@ pipeline{
         }
         success{
             echo "build is success"
+            deleteDir()
         }
         failure{
             echo "build is failure"
