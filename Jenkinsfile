@@ -67,7 +67,7 @@ pipeline{
             // }
             steps{
                  script{
-                      echo "THIS IS DEPLOY"
+                      eho "THIS IS DEPLOY"
               
                 }
             }
