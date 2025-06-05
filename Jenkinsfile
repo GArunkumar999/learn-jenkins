@@ -45,8 +45,9 @@ pipeline{
         }
         stage('test'){
             steps{
-                 script{
+                script{
                       echo "THIS IS TEST"
+            
               
                 }
             }
